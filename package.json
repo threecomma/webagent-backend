@@ -1,0 +1,43 @@
+{
+  "name": "webagent-backend",
+  "version": "0.0.1",
+  "description": "Advance backend (GraphQL, ExpressJS, MongoDB) for developers",
+  "main": "dist/main.js",
+  "repository": "git@github.com:threecomma/webagent-backend.git",
+  "author": "Sarmad Sangi <sarmadsangi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.5",
+    "graphql": "^0.10.1",
+    "graphql-server-express": "^0.7.2",
+    "graphql-tag": "^2.2.0",
+    "mongoose": "^4.10.0",
+    "mongoose-schema-to-graphql": "^2.5.7"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-watch": "^2.0.6",
+    "husky": "^0.13.4",
+    "lint-staged": "^3.5.1",
+    "prettier": "^1.3.1"
+  },
+  "scripts": {
+    "build": "babel lib --out-dir dist",
+    "fix": "prettier --single-quote --no-semi --write lib/*.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
